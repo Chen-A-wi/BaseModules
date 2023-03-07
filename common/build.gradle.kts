@@ -40,7 +40,19 @@ dependencies {
 	androidTestApi("androidx.test.ext:junit:1.1.5")
 	androidTestApi("androidx.test.espresso:espresso-core:3.5.1")
 
+	//region Koin
+	api("io.insert-koin:koin-core:3.3.3")
+	api("io.insert-koin:koin-android:3.3.3")
+	testApi("io.insert-koin:koin-test:3.3.3")
+	//endregion
+
+	//region Coroutines
+	api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+	api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+	//endregion
+
 	//region Utils
 	api("com.jakewharton.threetenabp:threetenabp:1.4.4")
+	api("com.blankj:utilcodex:1.31.1")
 	//endregion
 }
