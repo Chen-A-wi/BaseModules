@@ -1,6 +1,7 @@
 plugins {
 	id("com.android.library")
 	id("org.jetbrains.kotlin.android")
+	id("com.kezong.fat-aar")
 }
 
 android {
@@ -9,7 +10,6 @@ android {
 
 	defaultConfig {
 		minSdk = 24
-		targetSdk = 33
 
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 		consumerProguardFiles("consumer-rules.pro")
