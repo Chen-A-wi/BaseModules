@@ -19,17 +19,6 @@ object NetworkModule {
 				.add(MoshiArrayListJsonAdapter.FACTORY)
 				.build()
 		}
-		single { createOkHttpClient() }
-	}
-
-	private fun createOkHttpClient(): OkHttpClient {
-		return OkHttpClient.Builder()
-			.retryOnConnectionFailure(true)
-			.addNetworkInterceptor(LoggerInterceptor())
-			.connectTimeout(60L, TimeUnit.SECONDS)
-			.readTimeout(60L, TimeUnit.SECONDS)
-			.connectionPool(ConnectionPool(0, 1, TimeUnit.NANOSECONDS))
-			.build()
 	}
 
 	inline fun <reified T> createService(
