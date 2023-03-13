@@ -15,25 +15,25 @@ import java.sql.Timestamp
 import java.util.*
 
 val LocalDateTime.timestamp: Long
-    get() = DateTimeUtils.toSqlTimestamp(this).time
+	get() = DateTimeUtils.toSqlTimestamp(this).time
 
 val String.localDateTimeFromISO: LocalDateTime
-    get() = LocalDateTime.parse(this, DateTimeFormatter.ISO_DATE_TIME)
+	get() = LocalDateTime.parse(this, DateTimeFormatter.ISO_DATE_TIME)
 
 val String.localDateFromISO: LocalDate
-    get() = LocalDate.parse(this, DateTimeFormatter.ISO_DATE)
+	get() = LocalDate.parse(this, DateTimeFormatter.ISO_DATE)
 
 val Long.millisecondToSecond: Long
-    get() = this / 1000
+	get() = this / 1000
 
 val Long.secondToMillisecond: Long
-    get() = this * 1000
+	get() = this * 1000
 
 val Long.localDateTime: LocalDateTime
-    get() = DateTimeUtils.toLocalDateTime(Timestamp(this))
+	get() = DateTimeUtils.toLocalDateTime(Timestamp(this))
 
 fun LocalDateTime.isBetween(startDateTime: LocalDateTime, endDateTime: LocalDateTime): Boolean =
-    this.isAfter(startDateTime) && this.isBefore(endDateTime)
+	this.isAfter(startDateTime) && this.isBefore(endDateTime)
 
 /**
  * @return
@@ -41,11 +41,11 @@ fun LocalDateTime.isBetween(startDateTime: LocalDateTime, endDateTime: LocalDate
  * 其他: 2022/12/13 08:08:08
  */
 fun LocalDateTime.text(locale: Locale = Locale.CHINESE): String {
-    val pattern = when (locale.language) {
-        "en" -> DATE_TIME_FORMAT_EN
-        else -> DATE_TIME_FORMAT
-    }
-    return format(DateTimeFormatter.ofPattern(pattern, locale))
+	val pattern = when (locale.language) {
+		"en" -> DATE_TIME_FORMAT_EN
+		else -> DATE_TIME_FORMAT
+	}
+	return format(DateTimeFormatter.ofPattern(pattern, locale))
 }
 
 /**
@@ -54,16 +54,17 @@ fun LocalDateTime.text(locale: Locale = Locale.CHINESE): String {
  * 其他: 2022/12/13
  */
 fun LocalDate.text(locale: Locale = Locale.CHINESE): String {
-    val pattern = when (locale.language) {
-        "en" -> DATE_FORMAT_EN
-        else -> DATE_FORMAT
-    }
-    return format(DateTimeFormatter.ofPattern(pattern, locale))
+	val pattern = when (locale.language) {
+		"en" -> DATE_FORMAT_EN
+		else -> DATE_FORMAT
+	}
+	return format(DateTimeFormatter.ofPattern(pattern, locale))
 }
 
 fun LocalTime.textWithoutSec(): String = format(DateTimeFormatter.ofPattern(TIME_FORMAT_H_M))
 
-// 因為 FileName 不能含有 ":" 故 Format 成底線
+// 因為 FileName 不能含有 ":" 故 Format 成 HHMM ex:0912
 // See more: https://superuser.com/a/693819
-fun LocalTime.formatToFileName(): String =
-    format(DateTimeFormatter.ofPattern(TIME_FORMAT_H_M_FILE_NAME))
+fun LocalTime.formatToFileName(): String = format(
+	DateTimeFormatter.ofPattern(TIME_FORMAT_H_M_FILE_NAME)
+)

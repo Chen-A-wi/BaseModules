@@ -1,15 +1,12 @@
 package com.awilab.network.di
 
-import com.awilab.network.LoggerInterceptor
 import com.awilab.network.MoshiArrayListJsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import okhttp3.ConnectionPool
 import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import java.util.concurrent.TimeUnit
 
 object NetworkModule {
 	val networkModule = module {

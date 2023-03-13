@@ -43,6 +43,7 @@ dependencies {
 	//region Koin
 	api("io.insert-koin:koin-core:3.3.3")
 	api("io.insert-koin:koin-android:3.3.3")
+	api("io.insert-koin:koin-androidx-workmanager:3.3.3")
 	testApi("io.insert-koin:koin-test:3.3.3")
 	//endregion
 
