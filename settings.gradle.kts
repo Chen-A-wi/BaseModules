@@ -16,3 +16,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "BaseModules"
 include (":network")
+include (":testing")
+include (":common")

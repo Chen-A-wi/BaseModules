@@ -41,5 +41,16 @@ dependencies {
     testApi("io.insert-koin:koin-test:3.3.3")
     //endregion
 
+    // (Required) Writing and executing Unit Tests on the JUnit Platform
+    testApi("org.junit.jupiter:junit-jupiter-api:5.8.2")
+    testApi("org.junit.jupiter:junit-jupiter-engine:5.8.2")
+
+    // (Optional) If you need "Parameterized Tests"
+    testApi("org.junit.jupiter:junit-jupiter-params:5.8.2")
+
+    // (Optional) If you also have JUnit 4-based tests
+    testApi("junit:junit:4.13.2")
+    testApi("org.junit.vintage:junit-vintage-engine:5.8.2")
+
     api("com.google.truth:truth:1.1.3")
 }
