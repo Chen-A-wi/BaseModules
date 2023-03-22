@@ -56,4 +56,6 @@ dependencies {
 	api("com.jakewharton.threetenabp:threetenabp:1.4.4")
 	api("com.blankj:utilcodex:1.31.1")
 	//endregion
+
+	implementation(project(":BaseModules:testing"))
 }
