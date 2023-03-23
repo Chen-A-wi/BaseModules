@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("com.kezong.fat-aar")
+    id("de.mannodermaus.android-junit5")
 }
 
 android {
@@ -45,4 +46,5 @@ dependencies {
     api("com.squareup.moshi:moshi-kotlin:1.14.0")
 
     implementation(project(":BaseModules:common"))
+    implementation(project(":BaseModules:testing"))
 }
