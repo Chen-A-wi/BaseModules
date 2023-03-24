@@ -34,14 +34,9 @@ android {
 }
 
 dependencies {
+    //region Junit
     api("junit:junit:4.13.2")
     api("androidx.test.ext:junit:1.1.5")
-    api("androidx.test.espresso:espresso-core:3.5.1")
-
-    //region Koin
-    api("io.insert-koin:koin-test:3.3.3")
-    //endregion
-
     // (Required) Writing and executing Unit Tests on the JUnit Platform
     api("org.junit.jupiter:junit-jupiter-api:5.8.2")
     api("org.junit.jupiter:junit-jupiter-engine:5.8.2")
@@ -52,6 +47,13 @@ dependencies {
     // (Optional) If you also have JUnit 4-based tests
     api("junit:junit:4.13.2")
     api("org.junit.vintage:junit-vintage-engine:5.8.2")
+    //endregion
+
+    api("androidx.test.espresso:espresso-core:3.5.1")
+
+    //region Koin
+    api("io.insert-koin:koin-test:3.3.3")
+    //endregion
 
     api("com.google.truth:truth:1.1.3")
 }

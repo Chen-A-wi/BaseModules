@@ -7,7 +7,6 @@ import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import java.net.URL
 
-
 internal class UrlExtTest {
     private var fakeAwsUrl =
         "https://jie-storage-test.s3-accelerate.amazonaws.com/product/devicemanager/log/4839e0d8-abdb-4e5a-904c-e0f558cfd095/logact.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA5VI5KUTXCBUY7K7G%2F20221031%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20221031T082443Z&X-Amz-Expires=900&X-Amz-Signature=f6f9bbacc995d2b0210a1d773e28af0e96adca6fcbaf22f471bcbb7b54a1361f&X-Amz-SignedHeaders=host%3Bx-amz-acl&x-amz-acl=public-read"

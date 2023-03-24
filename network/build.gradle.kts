@@ -38,6 +38,7 @@ android {
 dependencies {
     api("com.squareup.okhttp3:okhttp:5.0.0-alpha.9")
     api("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10")
+    api("com.squareup.okhttp3:mockwebserver:4.10.0")
 
     api("com.squareup.retrofit2:retrofit:2.9.0")
     api("com.squareup.retrofit2:converter-moshi:2.9.0")
